@@ -9,31 +9,16 @@ If plotting is enabled, [Matplotlib](https://matplotlib.org/) and [Seaborn](http
 ## Usage
 The central_limit_theorem_demo.py file contains a CentralLimitTheorem class. It can be instantiated with a distribution in the form of a list.
 
-import central_limit_theorem_demo as clt
+![image](https://github.com/DharshanR31/CentralLimitTheoremDemo/assets/109989995/c3c954d3-d85d-4b7c-8ff8-961e9a519845)
 
-some_distribution = create_distribution(...)
-cltDemo = clt.CentralLimitTheorem(some_distribution)
 The demo can be run via the run_sample_demo method on CentralLimitTheoremDemo. This method takes a sample size N, a plotting flag plot, and an optional num_bins parameter describing the number of bins to use when plotting the demo output.
 
 ## Example
 A full example might look something like this.
 
-import central_limit_theorem_demo as clt
+![image](https://github.com/DharshanR31/CentralLimitTheoremDemo/assets/109989995/d1b08b6e-3127-4b85-a68f-dba9fd9e7066)
 
-def create_uniform_sample_distribution():
-    return range(100)
-
-def run():
-    sampleDistribution = create_uniform_sample_distribution()
         
-    # Plot the original population distribution
-    clt.plot_distribution(sampleDistribution, "Population Distribution", 0, 100, 20)
-        
-    # Plot a sampling distribution for values of N = 2, 3, 10, and 30
-    cltDemo = clt.CentralLimitTheoremDemo(sampleDistribution)
-    n_vals = [2, 3, 10, 30]
-    for N in n_vals:
-        cltDemo.run_sample_demo(N = N, plot = True, num_bins = 40)
 This produces the following output images.
 
 ![uniform_dist](https://github.com/DharshanR31/CentralLimitTheoremDemo/assets/109989995/847100dc-c29f-408f-b322-6a36cacf9d19)
